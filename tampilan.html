@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Loker Inventory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #28a745;
+            padding: 1rem;
+        }
+        .sidebar a {
+            color: #fff;
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar a:hover {
+            background-color: #218838;
+        }
+        .main-content {
+            padding: 2rem;
+        }
+        .table-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                <h2 class="text-white">Smart Loker Inventory</h2>
+                <a href="#">Dashboard</a>
+                <a href="#">Data Pengguna</a>
+                <a href="#">Data Transaksi</a>
+                <a href="#">Data Loker</a>
+            </div>
+            <div class="col-md-10 main-content">
+                <div class="logo">
+                    <img src="path/to/your/logo.png" alt="Polibatam Logo">
+                </div>
+                <h1>Welcome to Smart Loker Inventory</h1>
+                <div class="table-container">
+                    <h2>Data Transaksi</h2>
+                    <table id="transaksiTable" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>ID Transaksi</th>
+                                <th>ID Pengguna</th>
+                                <th>ID Loker</th>
+                                <th>Waktu Pinjam</th>
+                                <th>Waktu Kembali</th>
+                                <th>Barang Pinjam</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2024-05-03 22:31:09</td>
+                                <td>2024-05-04 22:31:09</td>
+                                <td>Arduino dan ESP32</td>
+                            </tr>
+                            <!-- Add more rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#transaksiTable').DataTable();
+        });
+    </script>
+</body>
+</html>
